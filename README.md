@@ -11,7 +11,7 @@ Can be any of the 12 Functions/Programs Below:
 <table><tr><td>
   
 1. [First_word](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_1/First_word)
-2. [Fizzbuzz]((https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_1/Fizzbuss))
+2. [Fizzbuzz](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_1/Fizzbuss)
 3. [Ft_strcpy](htthttps://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_1/Ft_strcpy)
 4. [Ft_strlen](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_1/Ft_strlen)
 5. [Ft_swap](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_1/Ft_swap)
