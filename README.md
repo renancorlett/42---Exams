@@ -30,7 +30,7 @@ Can be any of the 22 Functions/Programs Below:
   
 1. [alpha_mirror](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_2/alpha_mirror.c)
 2. [camel_to_snake](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_2/camel_to_snake.c)
-3. [count_word](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_2/count_word.c)
+3. [count_word](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_2/count_words.c)
 4. [do_op](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_2/do_op.c)
 5. [ft_atoi](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_2/ft_atoi.c)
 6. [ft_putnbr](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_2/ft_putnbr.c)
