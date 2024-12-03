@@ -60,7 +60,7 @@ Can be any of the 15 Functions/Programs Below:
 2. [epur_str](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/epur_str.c)
 3. [expand_str](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/expand_str.c)
 4. [ft_atoi_base](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/ft_atoi_base.c)
-5. [ft_list_size](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/ft_list_size.c)
+5. [ft_list_size](https://github.com/renancorlett/42---Exams/tree/main/Rank_2/Level_3/ft_list_size)
 6. [ft_range](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/ft_range.c)
 7. [ft_rrange](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/ft_rrange.c)
 8. [hidenp](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/hidenp.c)
@@ -77,16 +77,16 @@ Can be any of the 15 Functions/Programs Below:
 Can be any of the 10 Functions/Programs Below:
 <table><tr><td>
   
-1. [flood_fill](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/flood_fill.c)
+1. [flood_fill](https://github.com/renancorlett/42---Exams/tree/main/Rank_2/Level_4/flood_fill)
 2. [fprime](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/fprime.c)
 3. [ft_itoa](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/ft_itoa.c)
-4. [ft_list_foreach](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/ft_list_foreach.c)
+4. [ft_list_foreach](https://github.com/renancorlett/42---Exams/tree/main/Rank_2/Level_4/ft_list_foreach)
 5. [ft_list_remove_if](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/ft_list_remove.c)
 6. [ft_split](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/ft_split.c)
 7. [rev_wstr](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/rev_wstr.c)
 8. [rostring](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/rostring.c)
 9. [sort_int_tab](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/sort_int_tab.c)
-10. [sort_list](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_4/sort_list.c)
+10. [sort_list](https://github.com/renancorlett/42---Exams/tree/main/Rank_2/Level_4/sort_list)
 </td></tr></table>
 
 <br>
