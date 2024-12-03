@@ -64,7 +64,7 @@ Can be any of the 15 Functions/Programs Below:
 6. [ft_range](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/ft_range.c)
 7. [ft_rrange](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/ft_rrange.c)
 8. [hidenp](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/hidenp.c)
-9. [icm](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/icm.c)
+9. [lcm](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/lcm.c)
 10. [paramsum](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/paramsum.c)
 11. [pgcd](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/pgcd.c)
 12. [print_hex](https://github.com/renancorlett/42---Exams/blob/main/Rank_2/Level_3/print_hex.c)
