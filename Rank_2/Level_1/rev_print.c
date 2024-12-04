@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 	{
 		while (av[1][i])
 			i++;
-		while (i > 0)
+		while (i >= 0)
 		{
 			i--;
 			write (1, &av[1][i], 1);
