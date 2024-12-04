@@ -19,6 +19,7 @@ Example, if you pass 2 to print_bits, it will print "00000010"
 void	print_bits(unsigned char octet)
 {
 	int	i;
+	unsigned char	bit;
 
 	i = 8;
 	while (i--)
