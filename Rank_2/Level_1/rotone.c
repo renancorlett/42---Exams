@@ -1,6 +1,6 @@
 /*
-Assignment name  : rotone
-Expected files   : rotone.c
+Assignment name: rotone
+Expected files: rotone.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -41,13 +41,14 @@ int	main(int ac, char **av)
 	{
 		while (av[1][i])
 		{
-			if (av[1][i] >= 'a' && av[1][i] <= 'z')
-				c = (av[1][i] == 'z') ? 'a' : av[1][i] + 1;
-			else if (av[1][i] >= 'A' && av[1][i] <= 'Z')
-				c = (av[1][i] == 'Z') ? 'A' : av[1][i] + 1;
-			else
-				c = av[1][i];
-			write (1, &c, 1);
+			c = av[1][i];
+			if ((c >= 'a' && c < 'z') || (c >= 'A' && c < 'Z'))
+				c++;
+			else if (c == 'z')
+				c = 'a';
+			else if (c == 'Z')
+				c = 'A';
+			write(1, &c, 1);
 			i++;
 		}
 	}
