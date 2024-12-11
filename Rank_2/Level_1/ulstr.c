@@ -1,6 +1,6 @@
 /*
-Assignment name  : ulstr
-Expected files   : ulstr.c
+Assignment name: ulstr
+Expected files: ulstr.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -41,8 +41,8 @@ int	main(int ac, char **av)
 				c = av[1][i] + 32;
 			else
 				c = av[1][i];
-			i++;
 			write(1, &c, 1);
+			i++;
 		}
 	}
 	write (1, "\n", 1);
