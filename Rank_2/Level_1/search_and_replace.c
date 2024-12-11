@@ -1,6 +1,6 @@
 /*
-Assignment name  : search_and_replace
-Expected files   : search_and_replace.c
+Assignment name: search_and_replace
+Expected files: search_and_replace.c
 Allowed functions: write, exit
 --------------------------------------------------------------------------------
 
@@ -44,8 +44,8 @@ int	main(int ac, char **av)
 				c = av[3][0];
 			else
 				c = av[1][i];
-			i++;
 			write(1, &c, 1);
+			i++;
 		}
 	}
 	write (1, "\n", 1);
