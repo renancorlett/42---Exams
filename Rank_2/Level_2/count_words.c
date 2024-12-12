@@ -26,29 +26,23 @@ $>
 
 #include <unistd.h>
 
-int	count_word(char *str)
+int	count_words(char *str)
 {
-	int	count;
-	int	in_word;
+	int	i = 0;
+	int	words = 0;
 
-	count = 0;
-	in_word = 0;
-	while (*str)
+	while (str[i] == ' ')
+		i++;
+	while (str[i])
 	{
-		if ((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z') 
-			|| (*str >= '0' && *str <= '9'))
+		if (str[i] != ' ')
 		{
-			if (!in_word)
-			{
-				count++;
-				in_word = 1;
-			}
+			words++;
+			while (str[i] && str[i] != ' ')
+				i++;
 		}
 		else
-		{
-			in_word = 0;
-		}
-		str++;
+			i++;
 	}
-	return (count);
+	return (words);
 }
