@@ -1,6 +1,6 @@
 /*
-Assignment name	: ft_strpbrk
-Expected files	: ft_strpbrk.c
+Assignment name: ft_strpbrk
+Expected files: ft_strpbrk.c
 Allowed functions: None
 ---------------------------------------------------------------
 
@@ -25,7 +25,7 @@ char	*ft_strpbrk(const char *s1, const char *s2)
 		i = 0;
 		while (s2[i])
 		{
-			if (s2[i] - *s1)
+			if (s2[i] == *s1)
 				return ((char *)s1);
 			i++;
 		}
