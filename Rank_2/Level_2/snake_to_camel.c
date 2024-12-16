@@ -1,6 +1,6 @@
 /*
-Assignment name  : snake_to_camel
-Expected files   : snake_to_camel.c
+Assignment name: snake_to_camel
+Expected files: snake_to_camel.c
 Allowed functions: malloc, free, realloc, write
 --------------------------------------------------------------------------------
 
@@ -26,9 +26,8 @@ $
 
 int	main(int ac, char **av)
 {
-	int	i;
+	int	i = 0;
 
-	i = 0;
 	if (ac == 2)
 	{
 		while (av[1][i])
@@ -36,7 +35,7 @@ int	main(int ac, char **av)
 			if (av[1][i] == '_')
 			{
 				i++;
-			av[1][i] -= 32;
+				av[1][i] -= 32;
 			}
 			write(1, &av[1][i], 1);
 			i++;
