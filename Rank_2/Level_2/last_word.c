@@ -44,7 +44,7 @@ int	main(int ac, char **av)
 		while (i > 0 && av[1][i-1] == ' ' || (av[1][i-1] >= '\t' && av[1][i-1] <= '\r'))
 			i--;
 		end = i;
-		while (i > 0 && !av[1][i-1] != ' ' || (av[1][i-1] >= '\t' && av[1][i-1] <= '\r'))
+		while (i > 0 && !(av[1][i-1] == ' ' || (av[1][i-1] >= '\t' && av[1][i-1] <= '\r')))
 			i--;
 		start = i;
 		while (start < end)
