@@ -1,6 +1,6 @@
 /*
-Assignment name  : max
-Expected files   : max.c
+Assignment name: max
+Expected files: max.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
@@ -18,11 +18,9 @@ If the array is empty, the function returns 0.
 
 int	max(int* tab, unsigned int len)
 {
-	int	i;
-	int max;
+	int	i = 1;
+	int max = tab[0];
 	
-	i = 1;
-	max = tab[0];
 	if (len == 0)
 		return (0);
 	while (i < len)
