@@ -1,6 +1,6 @@
 /*
-Assignment name  : reverse_bits
-Expected files   : reverse_bits.c
+Assignment name: reverse_bits
+Expected files: reverse_bits.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
@@ -23,10 +23,9 @@ _____________
 
 unsigned char	reverse_bits(unsigned char octet)
 {
-	int	i;
+	int	i = 8;
 	unsigned char result;
 
-	i = 8;
 	while (i--)
 	{
 		result <<= 1;
