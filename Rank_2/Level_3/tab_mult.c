@@ -39,55 +39,48 @@ $>*/
 
 #include <unistd.h>
 
-int	ft_atoi(char *str)
+void	ft_putnbr(int n)
 {
-	int	result;
-	int	sign;
+	long	num = n;
+	char	c;
 
-	result = 0;
-	sign = 1;
-	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
-		str++;
-	if (*str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
+	if (n > 9)
+		ft_putnbr(n / 10);
+	c = (n % 10) + '0';
+	write (1, &c, 1);
+}
+int	ft_atoi(const char *str)
+{
+	int	i = 0;
+	int	result = 0;
+
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = result * 10 + *str - '0';
-		str++;
+		result = result * 10 + (str[i] - '0');
+		i++;
 	}
-	return (sign * result);
+	return (result);
 }
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-void	ft_putnbr(int nb)
-{
-	if (nb / 10 > 0)
-		ft_putnbr(nb / 10);
-	ft_putchar(nb % 10 + '0');
-}
-int	main(int ac, char ** av)
-{
-	int	i;
-	int	nbr;
 
-	if (ac != 2)
-		write (1, "\n", 1);
-	else
+int	main(int ac, char **av)
+{
+	int	i = 1;
+	int	n = ft_atoi(av[1]);
+
+	if (ac == 2)
 	{
-		i = 1;
-		nbr = ft_atoi(av[1]);
-		while (i <= 9 && nbr <= 238609183)
+		while (i <= 9)
 		{
 			ft_putnbr(i);
-			write(1, " x ", 3);
-			ft_putnbr(nbr);
-			write(1, " = ", 3);
-			ft_putnbr(i * nbr);
-			write(1, "\n", 1);
+			write (1, " x ", 3);
+			ft_putnbr(n);
+			write (1, " = ", 3);
+			ft_putnbr(i * n);
+			write (1, "\n", 1);
 			i++;
 		}
 	}
+	else
+		write (1, "\n", 1);
 	return (0);
 }
