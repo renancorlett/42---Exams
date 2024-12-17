@@ -1,5 +1,5 @@
-/*Assignment name  : ft_atoi_base
-Expected files   : ft_atoi_base.c
+/*Assignment name: ft_atoi_base
+Expected files: ft_atoi_base.c
 Allowed functions: None
 --------------------------------------------------------------------------------
 
@@ -19,49 +19,52 @@ Your function must be declared as follows:
 
 int	ft_atoi_base(const char *str, int str_base);*/
 
-#include <stdio.h>
+#include <stdlib.h>
 
-char	to_lower(char c)
+int	is_upper(char c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + ('a' - 'A'));
-	return (c);
+	return (c >= 'A' && c <= 'Z');
 }
-int	get_digit(char c, int digits_in_base)
+int	is_lower(char c)
 {
-	int	max_digit;
-
-	if (digits_in_base <= 10)
-		max_digit = digits_in_base - 1 + '0';
-	else
-		max_digit = digits_in_base -10 - 1 + 'a';
-	if ( c >= '0' && c <= '9' && c <= max_digit)
-		return (c - '0');
-	else if (c >= 'a' && c <= 'f' && c <= max_digit)
-		return (10 + c - 'a');
-	else
-		return(-1);	
+	return (c >= 'a' && c <= 'z');
+}
+int	is_digit(char c)
+{
+	return (c >= '0' && c <= '9');
+}
+int	is_space(char c)
+{
+	return (c >= ' ' && (c >= '\t' && c <= '\r'));
 }
 int	ft_atoi_base(const char *str, int str_base)
 {
-	int result = 0;
-	int sign = 1;
-	int digit;
+	int	i = 0;
+	int	result = 0;
+	int	sign = 1;
 
-	if (str == NULL || str_base < 2 || str_base > 16)
+	if (str_base < 2 || str_base > 16)
 		return (0);
-	if (*str == '-')
+	while (is_space(str[i]))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		sign = -1;
-		++str;
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	while (*str)
+	while (str[i])
 	{
-		digit = get_digit(to_lower(*str), str_base);
-		if (digit == -1)
+		result *= str_base;
+		if (is_digit(str[i]))
+			result += str[i] - '0';
+		else if (is_upper(str[i]))
+			result += str[i] - 'A' + 10;
+		else if (is_lower(str[i]))
+			result += str[i] - 'a' + 10;
+		else
 			break;
-		result = result * str_base + digit;
-		++str;
+		i++;
 	}
 	return (result * sign);
 }
