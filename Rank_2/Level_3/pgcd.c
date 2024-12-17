@@ -27,23 +27,23 @@ $*/
 #include <stdlib.h>
 #include <stdio.h>
 
-int	main(int ac, const char **av)
+int	main(int ac, char **av)
 {
-	int	nbr1;
-	int	nbr2;
-
 	if (ac == 3)
 	{
-		if ((nbr1 = atoi(av[1])) > 0 && (nbr2 = atoi(av[2])) > 0)
+		int	a = atoi(av[1]);
+		int	b = atoi(av[2]);
+
+		if (a > 0 && b > 0)
 		{
-			while (nbr1 != nbr2)
+			while (b != 0)
 			{
-				if (nbr1 > nbr2)
-					nbr1 -= nbr2;
-				else
-					nbr2 -= nbr1;
+				int	temp = b;
+				b = a % b;
+				a = temp;
 			}
-			printf("%d", nbr1);
+			printf("%d\n", a);
+			return (0);
 		}
 	}
 	printf("\n");
