@@ -48,7 +48,7 @@ int	main(int ac, char **av)
 			printf("1");
 		while (number >= ++i)
 		{
-			if (number % 1 == 0)
+			if (number % i == 0)
 			{
 				printf("%d", i);
 				if (number == 1)
