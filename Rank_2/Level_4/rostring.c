@@ -1,5 +1,5 @@
-/*Assignment name  : rostring
-Expected files   : rostring.c
+/*Assignment name: rostring
+Expected files: rostring.c
 Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
 
@@ -44,15 +44,15 @@ void write_word(char *start, char *end)
     }
 }
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
     char *str;
     char *first_word_start;
     char *first_word_end;
 
-    if (argc > 1)
+    if (ac > 1)
     {
-        str = argv[1];
+        str = av[1];
         while (*str == ' ' || *str == '\t') 
             str++;
         first_word_start = str;
@@ -61,24 +61,23 @@ int main(int argc, char **argv)
         first_word_end = str;
         while (*str == ' ' || *str == '\t')
             str++;
-        if (*str) {
-            while (*str)
+        while (*str)
+        {
+            if (*str == ' ' || *str == '\t')
             {
-                if (*str == ' ' || *str == '\t')
-                {
-                    while (*str == ' ' || *str == '\t')
-                        str++;
-                    if (*str)
-                        write(1, " ", 1);
-                } 
-                else 
-                {
-                    write(1, str, 1);
+                while (*str == ' ' || *str == '\t')
                     str++;
-                }
+                if (*str)
+                    write(1, " ", 1);
+            } 
+            else 
+            {
+                write(1, str, 1);
+                str++;
             }
-            write(1, " ", 1);
         }
+        if (first_word_start != first_word_end)
+            write(1, " ", 1);
         write_word(first_word_start, first_word_end);
     }
     write(1, "\n", 1);
