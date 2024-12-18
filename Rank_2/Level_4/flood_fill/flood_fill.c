@@ -84,6 +84,8 @@ F0FF000F
 FFF0000F
 $>*/
 
+#include "flood_fill.h"
+
 void	fill(char **tab, t_point size, t_point cur, char to_fill)
 {
 	if (cur.y < 0 || cur.y >= size.y || cur.x < 0 || cur.x >= size.x || tab[cur.y][cur.x] != to_fill)
