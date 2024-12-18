@@ -1,5 +1,5 @@
-/*Assignment name  : rev_wstr
-Expected files   : rev_wstr.c
+/*Assignment name: rev_wstr
+Expected files: rev_wstr.c
 Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
 
@@ -35,6 +35,7 @@ int main(int argc, char **argv)
 	int start;
 	int end;
 	int i = 0;
+	int flag;
 		
 	if(argc == 2)
 	{   
@@ -55,9 +56,10 @@ int main(int argc, char **argv)
 				write (1, &argv[1][start],1);
 				start++;		
 			}
-			if (flag !=0)
+			if (flag != 0)
 				write(1, " ", 1);
 		}
 	}
 	write(1, "\n", 1);
+	return (0);
 }
