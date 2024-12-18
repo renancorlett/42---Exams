@@ -1,5 +1,5 @@
-/*Assignment name  : sort_list
-Expected files   : sort_list.c
+/*Assignment name: sort_list
+Expected files: sort_list.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
@@ -31,26 +31,26 @@ int ascending(int a, int b)
 	return (a <= b);
 }*/
 
-#include <stdlib.h>
 #include "list.h"
 
-t_list *sort_list(t_list* lst, int (*cmp)(int, int)) {
-    int swap;
-    t_list *start;
+t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
+{
+	t_list *current = lst;
+	int temp;
 
-    start = lst;
-
-    while (lst != NULL && lst->next != NULL)
-    {
-        if ((*cmp)(lst->data, lst->next->data) == 0)
+	if(!lst)
+		return (NULL);
+	while(current->next)
 	{
-            swap = lst->data;
-            lst->data = lst->next->data;
-            lst->next->data = swap;
-            lst = start;
-        }
-	else
-		lst = lst->next;
-    }
-    return (start);
+		if(!cmp(current->data, current->next->data))
+		{
+			temp = current->data;
+			current->data = current->next->data;
+			current->next->data = temp;
+			current = lst;
+		}
+		else
+			current = current->next;
+	}
+	return(lst);
 }
