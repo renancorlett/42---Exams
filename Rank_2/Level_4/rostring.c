@@ -1,5 +1,6 @@
-/*Assignment name: rostring
-Expected files: rostring.c
+/*
+Assignment name  : rostring
+Expected files   : rostring.c
 Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
 
@@ -31,55 +32,56 @@ first
 $>
 $>./rostring | cat -e
 $
-$>*/
+$>
+*/
 
 #include <unistd.h>
+#include <stdlib.h>
 
-void write_word(char *start, char *end)
+int is_space(char c)
 {
-    while (start < end)
-    {
-        write(1, start, 1);
-        start++;
-    }
+    return (c == ' ' || c == '\t');
 }
 
-int main(int ac, char **av)
+void print_word(char *str, int start, int end)
 {
-    char *str;
-    char *first_word_start;
-    char *first_word_end;
+    for (int i = start; i < end; i++)
+        write(1, &str[i], 1);
+}
 
-    if (ac > 1)
+void rostring(char *str)
+{
+    int i = 0, len = 0, first_word_start = -1, first_word_end = -1;
+
+    while (str[i] && is_space(str[i]))
+        i++;
+    first_word_start = i;
+    while (str[i] && !is_space(str[i]))
+        i++;
+    first_word_end = i;
+    while (str[i])
     {
-        str = av[1];
-        while (*str == ' ' || *str == '\t') 
-            str++;
-        first_word_start = str;
-        while (*str && *str != ' ' && *str != '\t')
-            str++;
-        first_word_end = str;
-        while (*str == ' ' || *str == '\t')
-            str++;
-        while (*str)
+        while (str[i] && is_space(str[i]))
+            i++;
+        if (str[i] && !is_space(str[i]))
         {
-            if (*str == ' ' || *str == '\t')
-            {
-                while (*str == ' ' || *str == '\t')
-                    str++;
-                if (*str)
-                    write(1, " ", 1);
-            } 
-            else 
-            {
-                write(1, str, 1);
-                str++;
-            }
+            if (len++)
+                write(1, " ", 1);
+            int start = i;
+            while (str[i] && !is_space(str[i]))
+                i++;
+            print_word(str, start, i);
         }
-        if (first_word_start != first_word_end)
-            write(1, " ", 1);
-        write_word(first_word_start, first_word_end);
     }
+    if (len)
+        write(1, " ", 1);
+    print_word(str, first_word_start, first_word_end);
+}
+
+int main(int argc, char **argv)
+{
+    if (argc > 1)
+        rostring(argv[1]);
     write(1, "\n", 1);
     return 0;
 }
