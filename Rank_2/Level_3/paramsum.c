@@ -1,5 +1,5 @@
-/*Assignment name  : paramsum
-Expected files   : paramsum.c
+/*Assignment name: paramsum
+Expected files: paramsum.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -22,11 +22,12 @@ $>*/
 
 void	ft_putnbr(int n)
 {
-	char	digit;
+	long 	num = n
+	char	c;
 
-	if (n >= 10)
+	if (n > 9)
 		ft_putnbr(n / 10);
-	digit = (n % 10) + '0';
+	c = (n % 10) + '0';
 	write (1, &digit, 1);
 }
 int	main(int ac, char **av)
