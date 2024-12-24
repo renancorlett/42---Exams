@@ -1,6 +1,6 @@
 /*
-Assignment name  : ft_putstr
-Expected files   : ft_putstr.c
+Assignment name: ft_putstr
+Expected files: ft_putstr.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -18,9 +18,8 @@ void	ft_putstr(char *str);
 
 void	ft_putstr(char *str)
 {
-	int	i;
+	int	i = 0;
 
-	i = 0;
 	while (str[i])
 	{	
 		write(1, &str[i], 1);
