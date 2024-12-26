@@ -1,6 +1,6 @@
 /*
-Assignment name  : repeat_alpha
-Expected files   : repeat_alpha.c
+Assignment name: repeat_alpha
+Expected files: repeat_alpha.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -42,6 +42,8 @@ int	main(int ac, char **av)
 	{
 		while (av[1][i])
 		{
+			
+			c = av[1][i];
 			if (av[1][i] >= 'a' && av[1][i] <= 'z')
 				c = av[1][i] - 'a' + 1;
 			else if (av[1][i] >= 'A' && av[1][i] <= 'Z')
