@@ -1,5 +1,5 @@
-/*Assignment name : epur_str
-Expected files : epur_str.c
+/*Assignment name: epur_str
+Expected files: epur_str.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -41,13 +41,13 @@ int	main(int ac, const char **av)
 		while (av[1][i])
 		{
 			if (av[1][i] == ' ' || av[1][i] == '\t')
-				flg = 1;
-			if (!(av[1][i] == ' ' || av[1][i] == '\t'))
+				flag = 1;
+			else
 			{
-				if (flg)
-					write (1, " ", 1);
-				flg = 0;
-				write (1, &av[1][i],1);
+				if(flag)
+					write(1, " ", 1);
+				flag = 0;
+				write(1, &argv[1][i], 1);
 			}
 			i++;
 		}
