@@ -1,6 +1,6 @@
 /*
-Assignment name  : ft_strdup
-Expected files   : ft_strdup.c
+Assignment name: ft_strdup
+Expected files: ft_strdup.c
 Allowed functions: malloc
 --------------------------------------------------------------------------------
 
@@ -15,12 +15,10 @@ char    *ft_strdup(char *src);
 
 char	*ft_strdup(char *src)
 {
-	int	i;
-	int	len;
+	int	i = 0;
+	int	len = 0;
 	char *dup;
-
-	i = 0;
-	len = 0;
+	
 	while (src[len])
 		len++;
 	dup = (char *)malloc((len + 1) * sizeof(char));
