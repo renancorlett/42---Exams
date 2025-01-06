@@ -1,6 +1,6 @@
 /*
-Assignment name  : ft_strrev
-Expected files   : ft_strrev.c
+Assignment name: ft_strrev
+Expected files: ft_strrev.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
@@ -16,12 +16,10 @@ char    *ft_strrev(char *str);
 
 char	*ft_strrev(char *str)
 {
-	int	i;
-	int	len;
+	int	i = 0;
+	int	len = 0;
 	char temp;
 
-	i = 0;
-	len = 0;
 	while (str[len])
 		len++;
 	len--;
