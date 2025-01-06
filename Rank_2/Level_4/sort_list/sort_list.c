@@ -32,6 +32,7 @@ int ascending(int a, int b)
 }*/
 
 #include "list.h"
+#include <stddef.h>
 
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 {
