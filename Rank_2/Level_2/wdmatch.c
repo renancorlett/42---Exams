@@ -1,6 +1,6 @@
 /*
-Assignment name  : wdmatch
-Expected files   : wdmatch.c
+Assignment name: wdmatch
+Expected files: wdmatch.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -41,8 +41,8 @@ int	main(int ac, char **av)
 		while (av[1][i] && av[2][j])
 		{
 			if (av[1][i] == av[2][j])
-			i++;
-		j++;
+				i++;
+			j++;
 		}
 		if (av[1][i] == '\0')
 			write(1, av[1], i);
