@@ -38,3 +38,30 @@ int	main(int ac, char **av)
 	write (1, "\n", 1);
 	return (0);
 }
+
+
+Se pedir uma funcão :
+
+#include <unistd.h>
+
+char	*rev_print(char *str)
+{
+	int	i = 0;
+
+	while (str[i])
+		i++;
+	i = (i - 1);
+	while (i >= 0)
+	{
+		write(1, &str[i], 1);
+		i--;
+	}
+	return (0);
+}
+/*int main(void)
+{
+  rev_print("dlrow olleh");
+  write (1, "\n", 1);
+  rev_print("tnirp esreveR");
+  write (1, "\n", 1);
+}*/
