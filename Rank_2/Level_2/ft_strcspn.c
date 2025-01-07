@@ -11,6 +11,7 @@ The function should be prototyped as follows:
 
 size_t	ft_strcspn(const char *s, const char *reject);
 */
+#include <stdio.h>
 
 size_t	ft_strcspn(const char *s, const char *reject)
 {
