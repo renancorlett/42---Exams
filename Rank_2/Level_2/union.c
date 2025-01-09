@@ -63,7 +63,7 @@ int	main(int ac, char **av)
 		{
 			if (!check_double(av[2], av[2][i], j) && !check_double(av[1], av[2][j], i))
 				write(1, &av[2][j], 1);
-			i++;
+			j++;
 		}
 	}
 	write(1, "\n", 1);
