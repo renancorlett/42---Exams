@@ -23,8 +23,8 @@ Examples:
 int	*ft_range(int start, int end)
 {
 	int	i = 0;
-	int	len = abs(end - start) + 1;
-	int *arr = malloc(sizeof(int) * len);
+	int	len = abs(end - start);
+	int *arr = (int)malloc((len + 1) * sizeof(int));
 
 	if(!arr)
 		return (NULL);
