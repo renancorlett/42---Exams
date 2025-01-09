@@ -1,5 +1,5 @@
-/*Assignment name  : hidenp
-Expected files   : hidenp.c
+/*Assignment name: hidenp
+Expected files: hidenp.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ int	main(int ac, char **av)
 			j++;
 		}
 		if (av[1][i] == '\0')
-			write(1, "1",1);
+			write(1, "1", 1);
 		else
 			write(1, "0", 1);
 	}
