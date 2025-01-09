@@ -36,10 +36,12 @@ int	ft_atoi(char *str)
 void	print_hex(int n)
 {
 	char hex[] = "0123456789abcdef";
+	char	c;
 
 	if (n >= 16)
 		print_hex(n / 16);
-	write(1, &hex[n % 16], 1);
+	c = (n % 16) + '0';
+	write(1, &hex, 1);
 }
 int	main(int ac, char **av)
 {
