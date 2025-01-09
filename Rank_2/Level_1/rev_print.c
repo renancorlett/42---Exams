@@ -50,12 +50,8 @@ char	*rev_print(char *str)
 
 	while (str[i])
 		i++;
-	i = (i - 1);
-	while (i >= 0)
-	{
+	while (--i >= 0)
 		write(1, &str[i], 1);
-		i--;
-	}
 	return (0);
 }
 /*int main(void)
