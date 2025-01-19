@@ -1,6 +1,6 @@
 /*
-Assignment name  : last_word
-Expected files   : last_word.c
+Assignment name: last_word
+Expected files: last_word.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		while (av[1][i])
-		i++;
+			i++;
 		while (i > 0 && av[1][i-1] == ' ' || (av[1][i-1] >= '\t' && av[1][i-1] <= '\r'))
 			i--;
 		end = i;
