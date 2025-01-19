@@ -39,8 +39,8 @@ void inter(char *s1, char *s2)
     {
         if (seen[(unsigned char)*s1])
         {
-            write(1, s1, 1);
             seen[(unsigned char)*s1] = 0;
+            write(1, s1, 1);
         }
         s1++;
     }
