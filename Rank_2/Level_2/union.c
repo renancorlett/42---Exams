@@ -1,6 +1,6 @@
 /*
-Assignment name  : union
-Expected files   : union.c
+Assignment name: union
+Expected files: union.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
@@ -32,9 +32,8 @@ $>
 
 int	check_double(char *str, char c, int pos)
 {
-	int	i;
+	int	i = 0;
 
-	i = 0;
 	while (i < pos)
 	{
 		if (str[i] == c)
@@ -46,11 +45,9 @@ int	check_double(char *str, char c, int pos)
 
 int	main(int ac, char **av)
 {
-	int	i;
-	int	j;
+	int	i = 0;
+	int	j = 0;
 	
-	i = 0;
-	j = 0;
 	if (ac == 3)
 	{
 		while (av[1][i])
