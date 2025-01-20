@@ -28,14 +28,12 @@ $>*/
 #include <unistd.h>
 
 int	main(int ac, const char **av)
-{
-	int	i;
-	int flg;
+
+	int	i = 0;
+	int	flag = 0;
 
 	if (ac == 2)
 	{
-		flg = 0;
-		i = 0;
 		while (av[1][i] == ' ' || av[1][i] == '\t')
 			i++;
 		while (av[1][i])
