@@ -1,5 +1,5 @@
-/*Assignment name  : ft_split
-Expected files   : ft_split.c
+/*Assignment name: ft_split
+Expected files: ft_split.c
 Allowed functions: malloc
 --------------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ char	**ft_split(char *str)
 	int	i = 0;
 	int	j = 0;
 	int	k = 0;
-	int	wc = 0;
+	int	len = 0;
 	char	**out;
 
 	while (str[i])
@@ -41,11 +41,11 @@ char	**ft_split(char *str)
 		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
 			i++;
 		if (str[i])
-			wc++;
+			len++;
 		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
 			i++;
 	}
-	out = (char **)malloc(sizeof(char *) * (wc + 1));
+	out = (char **)malloc((len + 1) * sizeof(char *));
 	if (!out)
 		return (NULL);
 	i = 0;
@@ -58,7 +58,7 @@ char	**ft_split(char *str)
 			i++;
 		if (i > j)
 		{
-			out[k] = (char *)malloc(sizeof(char) * ((i - j) + 1));
+			out[k] = (char *)malloc((i - j) * sizeof(char) + 1));
 			if (!out[k])
 			{
 				while (k > 0)
