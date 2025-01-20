@@ -14,12 +14,10 @@ char	*ft_itoa(int nbr);*/
 
 char	*ft_itoa(int nbr)
 {
-	long	n;
-	int		len;
+	long	n = nbr;
+	int		len = (n <= 0) ? 1 : 0;
 	char	*str;
 
-	n = nbr;
-	len = (n <= 0) ? 1 : 0;
 	while (nbr)
 	{
 		nbr /= 10;
