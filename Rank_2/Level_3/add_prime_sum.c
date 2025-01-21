@@ -69,7 +69,10 @@ int	main(int ac, char **av)
 	{
 		n = ft_atoi(av[1]);
 		if (n <= 0)
-			return (write(1, "0\n", 2), 0);
+		{	
+			write(1, "0\n", 2);
+			return (0);
+		}
 		while (n > 0)
 		{
 			if (is_prime(n))
