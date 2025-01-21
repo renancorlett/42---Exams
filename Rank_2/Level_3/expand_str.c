@@ -29,12 +29,11 @@ $>*/
 
 int	main(int ac, const char **av)
 {
-	int	i;
+	int	i = 0;
 	int	flag = 0;
 
 	if (ac == 2)
 	{
-		i = 0;
 		while (av[1][i] == ' ' || av[1][i] == '\t')
 			i++;
 		while (av[1][i])
@@ -44,7 +43,7 @@ int	main(int ac, const char **av)
 			else
 			{
 				if (flag)
-					write (1, "   ",3);
+					write (1, "   ", 3);
 				flag = 0;
 				write(1, &av[1][i], 1);
 			}
