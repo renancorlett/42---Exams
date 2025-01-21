@@ -45,7 +45,7 @@ int	main(int ac, const char **av)
 				if(flag)
 					write(1, " ", 1);
 				flag = 0;
-				write(1, &argv[1][i], 1);
+				write(1, &av[1][i], 1);
 			}
 			i++;
 		}
