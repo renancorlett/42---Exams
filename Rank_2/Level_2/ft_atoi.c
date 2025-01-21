@@ -1,6 +1,6 @@
 /*
-Assignment name  : ft_atoi
-Expected files   : ft_atoi.c
+Assignment name: ft_atoi
+Expected files: ft_atoi.c
 Allowed functions: None
 --------------------------------------------------------------------------------
 
@@ -16,23 +16,22 @@ int	ft_atoi(const char *str);
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	result;
+	int	i = 0
+	int	sign = 0;
+	int	result = 0;
 
-	sign = 1;
-	result = 0;
-	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
-		str++;
-	if (*str == '-' || *str == '+')
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (*str == '-')
+		if (str[i] == '-')
 			sign = -1;
-		str++;
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = result * 10 + (*str - '0');
-		str++;
+		result = result * 10 + (str[i] - '0');
+		i++;
 	}
 	return (result * sign);
 }
