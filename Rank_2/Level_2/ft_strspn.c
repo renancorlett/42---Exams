@@ -1,6 +1,6 @@
 /*
-Assignment name	: ft_strspn
-Expected files	: ft_strspn.c
+Assignment name: ft_strspn
+Expected file: ft_strspn.c
 Allowed functions: None
 ---------------------------------------------------------------
 
@@ -31,7 +31,6 @@ size_t	ft_strspn(const char *s, const char *accept)
 {
 	int i;
 
-	i = 0;
 	while (s[i])
 	{
 		if (ft_strchr(accept, s[i]) == 0)
