@@ -1,6 +1,6 @@
 /*
-Assignment name  : rostring
-Expected files   : rostring.c
+Assignment name: rostring
+Expected files: rostring.c
 Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
 
@@ -38,20 +38,28 @@ $>
 #include <unistd.h>
 #include <stdlib.h>
 
-int is_space(char c)
+int    is_space(char c)
 {
     return (c == ' ' || c == '\t');
 }
 
-void print_word(char *str, int start, int end)
+void	print_word(char *str, int start, int end)
 {
-    for (int i = start; i < end; i++)
-        write(1, &str[i], 1);
+	int	i = start;
+
+	while (i < end)
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
 
-void rostring(char *str)
+void    rostring(char *str)
 {
-    int i = 0, len = 0, first_word_start = -1, first_word_end = -1;
+    int    i = 0, 
+    int    len = 0, 
+    int    first_word_start = -1, 
+    int    first_word_end = -1;
 
     while (str[i] && is_space(str[i]))
         i++;
@@ -78,10 +86,10 @@ void rostring(char *str)
     print_word(str, first_word_start, first_word_end);
 }
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-    if (argc > 1)
-        rostring(argv[1]);
+    if (ac > 1)
+        rostring(av[1]);
     write(1, "\n", 1);
     return 0;
 }
