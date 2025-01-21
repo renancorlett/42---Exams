@@ -30,13 +30,10 @@ $>
 
 int	main(int ac, char **av)
 {
-	int	i;
-	int	end;
-	int	start;
+	int	i = 0;
+	int	end = 0;
+	int	start = 0;
 
-	i = 0;
-	end = 0;
-	start = 0;
 	if (ac == 2)
 	{
 		while (av[1][i])
