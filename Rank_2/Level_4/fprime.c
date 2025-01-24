@@ -37,13 +37,11 @@ $*/
 
 int	main(int ac, char **av)
 {
-	int	i;
-	int	number;
+	int	i = 1;
+	int	number = atoi(av[1]);
 
 	if (ac == 2)
 	{
-		i = 1;
-		number = atoi(av[1]);
 		if (number == 1)
 			printf("1");
 		while (number >= ++i)
@@ -51,7 +49,7 @@ int	main(int ac, char **av)
 			if (number % i == 0)
 			{
 				printf("%d", i);
-				if (number == 1)
+				if (number == i)
 					break;
 				printf("*");
 				number /= i;
